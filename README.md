@@ -16,7 +16,13 @@ pip install ingradient-library-temp
 
 ## 2. Resampling
 ![스크린샷 2021-09-23 오후 4 43 59](https://user-images.githubusercontent.com/87344797/134471126-4a7c74ce-1bf2-4866-8267-8bd24667b7e2.png)
-> 1. gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
+
+This is a normal paragraph:
+
+gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
+    
+end code block.
+gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
 >> Get_target_spacing 객체를 만든다. 이 때 Anisotropy Threshold 값을 고를 수 있다. (2D는 아직 디버깅 진행하지 않음.) 또한 Default 값은 isotropy_percentile_value = 0.50, anisotropy_percentile_value = 0.90에 맞춰져 있다. 이를 변경하는 것도 가능하다.
 
 
