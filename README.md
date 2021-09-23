@@ -22,4 +22,12 @@ pip install ingradient-library-temp
 - run 메소드를 사용해 Dataset들이 저장된 폴더로부터 Spacing 값들을 구한다. 이 떄 각 spacing 값들이 해당 객체안에 저장된다.
 - Target Spacing값과 Anisotropy axis에 해당하는 index를 얻는다.
 - 해당 값들을 Resampling 객체를 만들 때 넣어준다.
-- 뒤에 이 Resampling 객체는 DataLoader에 들어가게 되며, 이 후 자동으로 patch를 뽑을 때 마다 Resampling을 진행한다.
+- 뒤에 이 Resampling 객체는 DataLoader에 들어가게 되며, 이 후 자동으로 patch 단위로 Resampling을 진행한다.
+
+
+## 3. Normalizer
+![스크린샷 2021-09-23 오후 5 00 30](https://user-images.githubusercontent.com/87344797/134472958-d024dce0-c524-4fb9-9e4d-24c9f8a9d30a.png)
+
+- Normalizer를 생성한다. 생성 시에 percentile clipping 값을 설정할 수 있다.
+- nnUNet의 기본 세팅은 MRI의 경우 percentile clipping을 사용하지 않고, CT의 경우 [0.05, 0.95]를 따른다.
+- 이 후, dataset 메소드에서 normalizer를 가져와 데이터를 샘플링 할 때 마다 한 patient 단위로 normalization을 수행한다.
