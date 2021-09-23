@@ -31,3 +31,23 @@ pip install ingradient-library-temp
 - Normalizer를 생성한다. 생성 시에 percentile clipping 값을 설정할 수 있다.
 - nnUNet의 기본 세팅은 MRI의 경우 percentile clipping을 사용하지 않고, CT의 경우 [0.05, 0.95]를 따른다.
 - 이 후, dataset 메소드에서 normalizer를 가져와 데이터를 샘플링 할 때 마다 한 patient 단위로 normalization을 수행한다.
+
+## 4. Data Augmentation
+![스크린샷 2021-09-23 오후 5 05 22](https://user-images.githubusercontent.com/87344797/134473519-9f42480a-226d-49da-bcd6-28bce29c4bcf.png)
+
+- nnUNet에 들어가는 데이터 어그멘테이션 메소드를 가져온다.
+- 만약 해당 메소드를 사용하고 싶지 않다면 prob 값을 0으로 하면 된다.
+- 구성을 향후 수정해 더 많은 Data Augmentation을 가져올 예정.
+- 각 데이터 어그멘테이션 별 메소드는 from ingradient_library import patch_transform 상에서 확인할 수 있다.  
+
+## 5. Dataset
+![스크린샷 2021-09-23 오후 5 03 15](https://user-images.githubusercontent.com/87344797/134473278-93b2df7a-04ee-411b-a7f8-592e90d05fdb.png)
+- CustomDataset은 torch.utils.data에서 dataset 클래스를 상속 받았다.
+- 데이터 셋이 저장된 디렉토리의 PATH를 입력한다.
+- 이전에 선언한 normalizer를 가져온다.
+
+## 5. DataLoader
+![스크린샷 2021-09-23 오후 5 05 22](https://user-images.githubusercontent.com/87344797/134473519-9f42480a-226d-49da-bcd6-28bce29c4bcf.png)
+
+
+
