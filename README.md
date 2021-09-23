@@ -42,12 +42,24 @@ pip install ingradient-library-temp
 
 ## 5. Dataset
 ![스크린샷 2021-09-23 오후 5 03 15](https://user-images.githubusercontent.com/87344797/134473278-93b2df7a-04ee-411b-a7f8-592e90d05fdb.png)
-- CustomDataset은 torch.utils.data에서 dataset 클래스를 상속 받았다.
+- CustomDataset은 torch.utils.data에서 dataset 클래스를 상속 받았다. 때문에 pytorch의 random split 연산을 사용할 수 있다.
 - 데이터 셋이 저장된 디렉토리의 PATH를 입력한다.
 - 이전에 선언한 normalizer를 가져온다.
 
 ## 5. DataLoader
-![스크린샷 2021-09-23 오후 5 05 22](https://user-images.githubusercontent.com/87344797/134473519-9f42480a-226d-49da-bcd6-28bce29c4bcf.png)
+![스크린샷 2021-09-23 오후 5 08 04](https://user-images.githubusercontent.com/87344797/134473860-3686453b-9d24-43dc-9d54-aa8b1a2d109e.png)
+- Batch Size는 하나의 Patient에서 뽑아내게 되며 기본적으로 nnUNet이 사용한 Oversampling이 지원된다.
+- iteration은 각 patient별로 몇번의 샘플링을 진행할 지 정한다. 만약 batch size = 2, iteration = 2 라면 1epoch 마다 하나의 patient에서 4번의 샘플링을 진행한다.
+- Data Augmentation 객체를 넣어서 Patch 단위로 Augmentation을 진행한다.
+- Resampling 객체를 사용해 Patch 단위로 Resampling을 진행한다. 이는 GPU 연산의 효율성과 계산 복잡도 증가를 위해 뒤에서 사용했다.
+
+
+## 6. Deep Supervision Model
+![스크린샷 2021-09-23 오후 5 11 48](https://user-images.githubusercontent.com/87344797/134474332-bfa1c66c-49c0-4009-876b-ec335b19d359.png)
+
+- nnUNet에서 사용한 Deep supervision model을 기본적으로 지원한다.
+
+## 7. Deep Supervision Loss
 
 
 
