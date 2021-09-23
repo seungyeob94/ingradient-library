@@ -19,7 +19,7 @@ pip install ingradient-library-temp
 
 This is a normal paragraph:
 
-gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
+ gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
     
 end code block.
 gt = preprocessing.Get_target_spacing(anisotropy_threshold=3, image_dimension=3)
