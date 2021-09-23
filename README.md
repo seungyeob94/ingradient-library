@@ -21,14 +21,17 @@ pip install ingradient-library-temp
 
 
 ![스크린샷 2021-09-23 오후 4 45 23](https://user-images.githubusercontent.com/87344797/134471262-41c97979-3e5d-4528-b056-950178db8ce6.png)
+
 2. Dataset들이 저장된 폴더로부터 Spacing 값들을 구한다.
 
 
 ![스크린샷 2021-09-23 오후 4 47 19](https://user-images.githubusercontent.com/87344797/134471483-0e1dc44a-9bfb-49ba-96ed-05259ef0ad5a.png)
+
 3. Target Spacing값과 Anisotropy axis에 해당하는 index를 얻는다.
 
 
 ![스크린샷 2021-09-23 오후 4 48 23](https://user-images.githubusercontent.com/87344797/134471608-c6e59aa4-2723-4935-bd92-50cf59d3b130.png)
+
 4. 이를 Resampling 객체를 만들 때 넣어준다.
 
 5. 뒤에 이 Resampling 객체는 DataLoader에 들어가게 되며, 이 후 자동으로 patch를 뽑을 때 마다 Resampling을 진행한다.
