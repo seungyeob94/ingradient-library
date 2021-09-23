@@ -11,7 +11,7 @@ pip install ingradient-library-temp
 ![스크린샷 2021-09-23 오후 4 41 29](https://user-images.githubusercontent.com/87344797/134470839-ee7ccc7b-7182-43ac-9425-2f83daa59d1a.png)
 - npz 파일의 dimension은 [modalities, z, x, y] 와 같이 이루어지며, dataset을 로딩하는 과정에서 direction을 보정해주기 때문에 단순히 위와 같이 저장하면 된다.
 - 저장 전에 각 데이터에 대해 Non-zero Cropping이 들어가며 이는 ingradient_library.preprocessing의 Cropping Method를 사용하면 된다.
-- 해당 예시는 데이터 에 대한 저장 방법이고 이를 반복문을 사용해 활용한다.
+- 해당 예시는 데이터 한 개에 대한 저장 방법이고 이를 반복문을 사용해 활용한다.
 
 
 ## 2. Resampling
