@@ -55,8 +55,7 @@ pip install ingradient-library-temp
 
 
 ## 6. Deep Supervision Model
-![스크린샷 2021-09-23 오후 5 11 48](https://user-images.githubusercontent.co![Uploading 스크린샷 2021-09-23 오후 5.12.43.png…]()
-m/87344797/134474332-bfa1c66c-49c0-4009-876b-ec335b19d359.png)
+![스크린샷 2021-09-23 오후 5 11 48](https://user-images.githubusercontent.co![Uploading 스크린샷 2021-09-23 오후 5.12.43.png…]()m/87344797/134474332-bfa1c66c-49c0-4009-876b-ec335b19d359.png)
 
 ![스크린샷 2021-09-23 오후 5 12 56](https://user-images.githubusercontent.com/87344797/134474469-5feaca9b-45d6-4a2d-be3e-b68d7dadc14b.png)
 
