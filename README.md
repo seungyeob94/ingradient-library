@@ -55,11 +55,32 @@ pip install ingradient-library-temp
 
 
 ## 6. Deep Supervision Model
-![스크린샷 2021-09-23 오후 5 11 48](https://user-images.githubusercontent.com/87344797/134474332-bfa1c66c-49c0-4009-876b-ec335b19d359.png)
+![스크린샷 2021-09-23 오후 5 11 48](https://user-images.githubusercontent.co![Uploading 스크린샷 2021-09-23 오후 5.12.43.png…]()
+m/87344797/134474332-bfa1c66c-49c0-4009-876b-ec335b19d359.png)
+
+![스크린샷 2021-09-23 오후 5 12 56](https://user-images.githubusercontent.com/87344797/134474469-5feaca9b-45d6-4a2d-be3e-b68d7dadc14b.png)
 
 - nnUNet에서 사용한 Deep supervision model을 기본적으로 지원한다.
+- Loss 역시 연산 식이 기존과 다르므로 지원한다.
 
-## 7. Deep Supervision Loss
+## 7. Training Example
+![스크린샷 2021-09-23 오후 5 13 36](https://user-images.githubusercontent.com/87344797/134474568-c18322e1-50b8-4ce8-aaf2-719f772519c3.png)
+- 다음과 같은 구성을 따른다. nnUNet의 learning rate decay를 명시해주는 것이 필요하다.
+- Trainer를 구현하는 작업도 진행할 계획이다.
+
+## 8. Inference
+![스크린샷 2021-09-23 오후 5 14 30](https://user-images.githubusercontent.com/87344797/134474697-2e4da734-4704-4724-ab84-4009f820c0f0.png)
+
+- dataset에 대해 Inference를 진행한다. dataset은 CustomDataset에 해당하는 모듈이다.
+- mode = 'save' 일 경우 결과물을 save_path에 저장한다. mode = 'dice' 일 경우 각 파일들의 dice score를 print 한다.
+
+
+## 9. Visualization
+![스크린샷 2021-09-23 오후 5 16 42](https://user-images.githubusercontent.com/87344797/134475015-244de41f-b097-4eba-b3fb-5ff2469df5d1.png)
+- Training 시에 Segmentation Output을 각 Deepsupervision Layer 별로 지원한다.
+- 이 외에도 기본 plain unet에 대한 시각화도 지원한다.
+
+
 
 
 
